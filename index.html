@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
     <style>
-        /* Ajoutez ici le code CSS */
         /* Style général pour la carte */
         #map {
             height: 100vh;
@@ -60,9 +59,9 @@
     </style>
 </head>
 <body>
-    <header>Header</header>
+    <header>Points d'intérêt en Alsace</header>
     <div id="map"></div>
-    <footer>Footer</footer>
+    <footer>&copy; 2024 Tourisme Alsace</footer>
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
     <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
@@ -78,74 +77,33 @@
         // Ajouter un contrôle de géocodage (recherche)
         L.Control.geocoder().addTo(map);
 
-        // Ajouter des points d'intérêt (exemples)
+        // Ajouter des points d'intérêt en Alsace
         var pointsOfInterest = [
-            {
-                name: "Cathédrale Notre-Dame de Strasbourg",
-                lat: 48.5810,
-                lon: 7.7500,
-                description: "Une cathédrale gothique renommée."
-            },
-            {
-                name: "Château du Haut-Koenigsbourg",
-                lat: 48.2494,
-                lon: 7.3444,
-                description: "Un château fort médiéval."
-            },
-            {
-                name: "Musée Unterlinden",
-                lat: 48.0800,
-                lon: 7.3580,
-                description: "Un musée d'art à Colmar."
-            },
-            {
-                name: "La Petite France",
-                lat: 48.5796,
-                lon: 7.7392,
-                description: "Un quartier historique de Strasbourg."
-            },
-            {
-                name: "Mont Sainte-Odile",
-                lat: 48.4421,
-                lon: 7.4045,
-                description: "Un lieu de pèlerinage avec vue panoramique."
-            },
-            {
-                name: "Route des Vins d'Alsace",
-                lat: 48.1667,
-                lon: 7.3333,
-                description: "Un itinéraire touristique à travers les vignobles alsaciens."
-            },
-            {
-                name: "Musée Lalique",
-                lat: 48.8726,
-                lon: 7.2311,
-                description: "Un musée dédié aux créations en cristal de René Lalique."
-            },
-            {
-                name: "Château de Fleckenstein",
-                lat: 49.0400,
-                lon: 7.7503,
-                description: "Un château médiéval dans le parc naturel des Vosges du Nord."
-            },
-            {
-                name: "Écomusée d'Alsace",
-                lat: 47.8620,
-                lon: 7.2853,
-                description: "Un musée en plein air présentant la vie rurale alsacienne."
-            },
-            {
-                name: "Parc de l'Orangerie",
-                lat: 48.5861,
-                lon: 7.7721,
-                description: "Un parc public à Strasbourg."
-            },
-            {
-                name: "Château de Kaysersberg",
-                lat: 48.1372,
-                lon: 7.2644,
-                description: "Un château en ruine avec une vue sur la vallée."
-            }
+            { name: "Cathédrale Notre-Dame de Strasbourg", lat: 48.5810, lon: 7.7500, description: "Une cathédrale gothique renommée." },
+            { name: "Château du Haut-Koenigsbourg", lat: 48.2494, lon: 7.3444, description: "Un château fort médiéval." },
+            { name: "Musée Unterlinden", lat: 48.0800, lon: 7.3580, description: "Un musée d'art à Colmar." },
+            { name: "La Petite France", lat: 48.5796, lon: 7.7392, description: "Un quartier historique de Strasbourg." },
+            { name: "Mont Sainte-Odile", lat: 48.4421, lon: 7.4045, description: "Un lieu de pèlerinage avec vue panoramique." },
+            { name: "Route des Vins d'Alsace", lat: 48.1667, lon: 7.3333, description: "Un itinéraire touristique à travers les vignobles alsaciens." },
+            { name: "Musée Lalique", lat: 48.8726, lon: 7.2311, description: "Un musée dédié aux créations en cristal de René Lalique." },
+            { name: "Château de Fleckenstein", lat: 49.0400, lon: 7.7503, description: "Un château médiéval dans le parc naturel des Vosges du Nord." },
+            { name: "Écomusée d'Alsace", lat: 47.8620, lon: 7.2853, description: "Un musée en plein air présentant la vie rurale alsacienne." },
+            { name: "Parc de l'Orangerie", lat: 48.5861, lon: 7.7721, description: "Un parc public à Strasbourg." },
+            { name: "Château de Kaysersberg", lat: 48.1372, lon: 7.2644, description: "Un château en ruine avec une vue sur la vallée." },
+            { name: "Parlement européen", lat: 48.5977, lon: 7.7726, description: "Le siège officiel du Parlement européen." },
+            { name: "Musée d'Art Moderne et Contemporain de Strasbourg", lat: 48.5793, lon: 7.7379, description: "Un musée consacré à l'art moderne et contemporain." },
+            { name: "Zoo de Mulhouse", lat: 47.7505, lon: 7.3368, description: "Un grand parc zoologique et botanique." },
+            { name: "Musée Bartholdi", lat: 48.0797, lon: 7.3585, description: "Un musée dédié au sculpteur de la Statue de la Liberté." },
+            { name: "Château de Lichtenberg", lat: 48.9081, lon: 7.4822, description: "Un château fort datant du XIIIe siècle." },
+            { name: "Fort de Mutzig", lat: 48.5332, lon: 7.4039, description: "Un fort militaire historique de la Première Guerre mondiale." },
+            { name: "Musée du Jouet de Colmar", lat: 48.0772, lon: 7.3588, description: "Un musée consacré aux jouets anciens et modernes." },
+            { name: "Maison Kammerzell", lat: 48.5817, lon: 7.7489, description: "Un bâtiment médiéval emblématique de Strasbourg." },
+            { name: "Parc Naturel Régional des Ballons des Vosges", lat: 48.0466, lon: 6.9780, description: "Un vaste parc naturel offrant des paysages magnifiques." },
+            { name: "Château de Hohlandsbourg", lat: 48.0715, lon: 7.2458, description: "Un château avec une vue panoramique sur la plaine d'Alsace." },
+            { name: "Cascade du Nideck", lat: 48.5184, lon: 7.2882, description: "Une impressionnante cascade entourée de légendes." },
+            { name: "Lac Blanc", lat: 48.1465, lon: 7.1243, description: "Un lac de montagne populaire pour les activités de plein air." },
+            { name: "Les Trois Châteaux d'Eguisheim", lat: 48.0407, lon: 7.3047, description: "Trois châteaux médiévaux situés sur une colline." },
+            { name: "Château du Hohbarr", lat: 48.7416, lon: 7.3554, description: "Un château perché offrant une vue panoramique." }
         ];
 
         // Utiliser un groupe de marqueurs pour le clustering
