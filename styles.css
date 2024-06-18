@@ -17,3 +17,50 @@ h1 {
     height: 600px;
     margin-bottom: 20px;
 }
+/* Style général pour la carte */
+#map {
+    height: 100vh;
+    width: 100%;
+}
+
+/* Pour les écrans de moins de 768px (tablettes et téléphones) */
+@media (max-width: 768px) {
+    #map {
+        height: 70vh;
+    }
+}
+
+/* Pour les écrans de moins de 576px (petits téléphones) */
+@media (max-width: 576px) {
+    #map {
+        height: 60vh;
+    }
+}
+
+/* Styles supplémentaires pour d'autres éléments */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header, footer {
+    padding: 10px;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+/* Pour les écrans de moins de 768px (tablettes et téléphones) */
+@media (max-width: 768px) {
+    header, footer {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+/* Pour les écrans de moins de 576px (petits téléphones) */
+@media (max-width: 576px) {
+    header, footer {
+        font-size: 12px;
+        padding: 6px;
+    }
+}
