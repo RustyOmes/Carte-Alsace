@@ -17,6 +17,7 @@ h1 {
     height: 600px;
     margin-bottom: 20px;
 }
+
 var pointsOfInterest = [
     {
         name: "Cathédrale Notre-Dame de Strasbourg",
